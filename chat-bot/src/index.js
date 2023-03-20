@@ -8,6 +8,10 @@ import "./index.css";
 import firebase from "./firebase";
 import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 import { useDispatch, useSelector } from "react-redux";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./features/auth/Login";
+import SingUp from "./features/auth/SingUp";
+import NotFound from "./components/NotFound";
 
 const rrfProps = {
   firebase,
@@ -20,7 +24,16 @@ const rrfProps = {
 
 const Root = () => {
   const dispatch = useDispatch();
-  return <div></div>;
+  return (
+    <Router>
+      <Routes>
+        <Route exact path="/" Component={App} />
+        <Route exact path="/login" Component={Login} />
+        <Route exact path="/register" Component={SingUp} />
+        <Route exact path="*" Component={NotFound} />
+      </Routes>
+    </Router>
+  );
 };
 export default Root;
 
@@ -31,7 +44,8 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
-        <App />
+        {/* <App /> */}
+        <Root />
       </ReactReduxFirebaseProvider>
     </Provider>
   </React.StrictMode>
