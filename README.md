@@ -1,20 +1,13 @@
 # chatBot
 
-<!-- --- dependencies  -->
-
+dependencies --><br/>
 npx create-react-app todo-app<br/>
-
-<!-- //firebase  -->
-
+firebase -->
 npm install firebase <br/>
 npm i --save redux react-redux <br/>
 npm install --save react-redux-firebase <br/>
-
-<!-- or add -->
-
+or add -->
 npm install --save react-redux-firebase --legacy-peer-deps <br/>
 npm install --save react-redux-firebase --force <br/>
-
-<!-- react-router --> <br/>
-
+react-router --> <br/>
 npx create-react-app demo-app <br/>
