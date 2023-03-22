@@ -4,7 +4,6 @@ import { Provider } from "react-redux";
 import { store } from "./app/store";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./index.css";
 import firebase from "./firebase";
 import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./features/auth/Login";
 import SingUp from "./features/auth/SingUp";
 import NotFound from "./components/NotFound";
+import "semantic-ui-css/semantic.min.css";
 
 const rrfProps = {
   firebase,
